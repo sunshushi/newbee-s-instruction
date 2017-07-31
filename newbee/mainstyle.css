@@ -93,11 +93,6 @@
 		        transform: translateY(0);
 		    }
 		}
-        
-
-		/*兼容手机*/
-
-
 
 		/*样式*/
 		.nanwang{
@@ -105,7 +100,11 @@
 		}
 		.panel{
 			border-radius: 0;
+			padding: 1% 2%;
 			position: absolute !important;
+		}
+		.panel .title{
+			font-size: 30px;
 		}
 
 		#nanwang{
@@ -148,6 +147,7 @@
 		.enter-right{
 			animation:moveleft 1.5s both ease-out;
 			z-index: 100;
+			overflow: hidden;
 		}
 		.enter-left{
 			animation:moveright 1.5s both ease-out;
@@ -156,16 +156,28 @@
 		.scroll-move{
 			animation:movetop 1.5s both ease-out;
 		}
-
-		.main-word{
-			float:left;
-			width: 50%;
-
-		}
+		
 		.main-img{
 			float: right;
 			display: inline;
-			width: 50%;
+			width: 49%;
+			margin-bottom: 10px;
+
+		}
+
+		.main-word{
+			float:left;
+			width: 49%;
+			text-align:justify;
+			text-justify:newspaper;
+			text-justify:inter-ideograph;
+			margin-bottom: 10px;
+		}
+		
+		.turn{
+			display: block;
+			margin-bottom: 10px;
+			clear: both;
 		}
 
 		.ng-enter {
@@ -188,3 +200,26 @@
 		    animation:slideOutLeft 0.5s both ease-in;
 		}
 
+
+		/*兼容手机*/
+		@media screen and (max-width: 500px) {
+			.panel .title{
+				font-size: 30px;
+			}
+			.main-word{
+				float:left;
+				width: 100%;
+			}
+			.main-img{
+				float: right;
+				display: inline;
+				width: 100%;
+				margin-top: 10px;
+			}
+			.turn{
+				display: flex;
+				justify-content: space-between;
+				clear: both;
+			}
+
+		}
