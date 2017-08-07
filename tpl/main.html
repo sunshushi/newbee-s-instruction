@@ -1,0 +1,219 @@
+
+
+
+	<div ng-controller="mainCtrl" ng-init="init()" class="main {{pageClass}}">
+		
+		<nav class="navbar navbar-inverse navbar-hide" role="navigation">
+		    <div class="navbar-header">
+		        <a class="navbar-brand">地大新生手册</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		        <li>
+		            <a ui-sref="index">首页</a>
+		        </li>
+		        <li>
+		            <a ui-sref="nanwang">南望山下</a>
+		        </li>
+		        <li>
+		            <a ui-sref="donglin">东湖河畔</a>
+		        </li>
+		        <li>
+		            <a ui-sref="gold">点石成金</a>
+		        </li>
+		        <li>
+		            <a ui-sref="pointstone">关于我们</a>
+		        </li>
+		    </ul>
+		</nav>
+		<a class="btn btn-warning btn-hide" style="position:absolute;right:10px;z-index:999;top:52px;">下拉</a>
+		
+		<div class="panel panel-primary" id="homepage" scrollslide ng-hide="homepagehide" >
+			<div class="enter-right" id="cover">
+				<div class="row">
+					<div class="col-sm-12 col-xs-12">
+						<div class="col-sm-6 col-xs-6">
+							<h1>中国地质大学新生手册</h1>
+							<br>
+							<p>Lorem ipsum dolor sit amet</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 col-xs-12 main-footer">
+							<div class="col-sm-6 col-xs-6">
+								<a class="btn btn-left btn-danger" ng-click="lastpage('homepagehide')"><span>上一页</span></a>
+							</div>
+							<div class="col-sm-6 col-xs-6">
+								<a class="btn btn-right btn-danger" ng-click="nextpage('homepagehide')"><span>下一页</span></a>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-primary" id="nanwang" scrollslide  ng-hide="nanwanghide">
+			<div id="cover">
+				<div class="enter-right">
+					<div class="row title">
+						<div class="col-sm-12 col-xs-12">
+							<div class="col-sm-6 col-xs-6">
+								<h1>南望山下的开始</h1>
+								<br>
+								<p>Lorem ipsum dolor sit amet</p>
+							</div>
+						</div>
+					</div>
+					<div class="row choose">
+						<div class="col-sm-12 col-xs-12 choose-content">
+							<div class="col-sm-3 col-xs-3"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="nanwang.school">学校介绍</a></div>
+							<div class="col-sm-3 col-xs-3"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="nanwang.map">地图</a></div>
+							<div class="col-sm-3 col-xs-3"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="nanwang.wholeschool">全景校园</a></div>
+							<div class="col-sm-3 col-xs-3"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="nanwang.list">必备清单</a></div>
+							<div class="col-sm-3 col-xs-3"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="nanwang.trans">乘车交通</a></div>
+							<div class="col-sm-3 col-xs-3"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="nanwang.process">报道流程</a></div>
+							<div class="col-sm-3 col-xs-3"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="nanwang.loan">关于贷款</a></div>
+
+						</div>
+						
+					</div>
+					
+					<div class="row">
+						<div class="col-sm-12 col-xs-12 ">
+								<div class="col-sm-6 col-xs-6">
+									<a class="btn btn-default btn-left btn-danger" ng-click="lastpage('nanwanghide')"><span>上一页</span></a>
+								</div>
+								<div class="col-sm-6 col-xs-6">
+									<a class="btn btn-default btn-right btn-danger" ng-click="nextpage('nanwanghide')"><span>下一页</span></a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="panel panel-primary" id="donglin" scrollslide  ng-hide="donglinhide" >
+			<div id="cover">
+				<div class="enter-right">
+					<div class="row title">
+						<div class="col-sm-12 col-xs-12">
+							<div class="col-sm-6 col-xs-6">
+								<h1>东湖河畔的生活</h1>
+								<br>
+								<p>Lorem ipsum dolor sit amet</p>
+							</div>
+						</div>
+					</div>
+					<div class="row choose">
+						<div class="col-sm-12 col-xs-12 choose-content">
+							<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="donglin.army">军训</a></div>
+							<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="donglin.dor">宿舍</a></div>
+							<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="donglin.web">网络</a></div>
+							<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="donglin.food">吃喝</a></div>
+							<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="donglin.entertain">玩乐</a></div>
+							<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="donglin.life_trans">常用交通</a></div>
+							<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="donglin.party">学校活动</a></div>
+							<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="donglin.hobby">兴趣社团</a></div>
+							<div class="col-sm-2 col-xs-2"> <a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="donglin.partime">勤工助学</a></div>
+							<div class="col-sm-3 col-xs-3"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="donglin.union">学生会与团学联</a></div>
+
+						</div>
+						
+					</div>
+					
+					<div class="row">
+						<div class="col-sm-12 col-xs-12 ">
+								<div class="col-sm-6 col-xs-6">
+									<a class="btn btn-default btn-left btn-danger" ng-click="lastpage('donglinhide')"><span>上一页</span></a>
+								</div>
+								<div class="col-sm-6 col-xs-6">
+									<a class="btn btn-default btn-right btn-danger" ng-click="nextpage('donglinhide')"><span>下一页</span></a>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="panel panel-primary" id="gold" scrollslide ng-hide="goldhide">
+			<div id="cover">
+			<div class="enter-right">
+			<div class="row title">
+				<div class="enter-right col-sm-12 col-xs-12">
+					<div class="col-sm-6 col-xs-6">
+						<h1>点石成金的学习</h1>
+						<br>
+						<p>Lorem ipsum dolor sit amet</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="row choose">
+				<div class="col-sm-12 col-xs-12 choose-content">
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.build">教学楼</a></div>
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.lib">图书馆</a></div>
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.study">日常学习</a></div>
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.exam">考试</a></div>
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.stu_work">学生工作</a></div>
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.major_ch">转专业</a></div>
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.tw_deg">双学位</a></div>
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.rubbage">教务处</a></div>
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.gradu">保研与考研</a></div>
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.foreign">出国留学</a></div>
+					<div class="col-sm-2 col-xs-2"><a class="btn btn-warning col-sm-12 col-xs-12" ui-sref="gold.job">就业与创业</a></div>
+				</div>
+				
+
+
+			</div>
+			<div class="row">
+
+				<div class="col-sm-12 col-xs-12">
+					<div class="col-sm-6 col-xs-6">
+						<a class="btn btn-default btn-left btn-danger" ng-click="lastpage('goldhide')"><span>上一页</span></a>
+					</div>
+					<div class="col-sm-6 col-xs-6">
+						<a class="btn btn-default btn-right btn-danger" ng-click="nextpage('goldhide')"><span>下一页</span></a>
+					</div>
+
+				</div>
+			</div>
+			</div>
+			</div>
+
+		</div>
+
+
+		<div class="panel panel-primary" id="pointstone" scrollslide ng-hide="pointstonehide">
+			<div id="cover">
+			<div class="enter-right">
+			<div class="row title">
+				<div class="enter-right col-sm-12 col-xs-12">
+					<div class="col-sm-6 col-xs-6">
+						<h1>点石团队&&新媒体中心--强强联合</h1>
+						<br>
+						<p>Lorem ipsum dolor sit amet</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="row choose">
+
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-xs-12">
+					<div class="col-sm-6 col-xs-6">
+						<a class="btn btn-default btn-left btn-danger" ng-click="lastpage('pointstonehide')"><span>上一页</span></a>
+					</div>
+					<div class="col-sm-6 col-xs-6">
+						<a class="btn btn-default btn-right btn-danger" ng-click="nextpage('pointstonehide')"><span>下一页</span></a>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+
+	</div>

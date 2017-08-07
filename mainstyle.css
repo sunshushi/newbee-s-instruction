@@ -1,0 +1,341 @@
+/*reset*/
+		body,h1,h2,h3,h4,h5,h6,p,ol,ul{
+		    margin: 0;
+		}
+		ol,ul{
+		    padding: 0;
+		}
+		ol,ul{
+		    list-style: none;
+		}
+		a{
+		    text-decoration: none;
+		}
+		em{
+		    font-style:normal;
+		}
+		img{
+			height: 140px;
+		}
+
+
+		/*动画*/
+		@keyframes moveleft{
+			from{
+				transform:translateX(100%);
+			}
+			
+		}
+
+		@keyframes moveright{
+			from{
+				transform:translateX(-100%);
+			}
+			
+		}
+
+		@keyframes movetop{
+			from{
+				transform:translateY(600px);
+			}
+			to{
+				z-index: 5;
+			}
+			
+		}
+
+		@keyframes rotateFall {
+		    0% {
+		        transform: rotateZ(0deg);
+		    }
+		    20% {
+		        transform: rotateZ(10deg);
+		        animation-timing-function: ease-out;
+		    }
+		    40% {
+		        transform: rotateZ(17deg);
+		    }
+		    60% {
+		        transform: rotateZ(16deg);
+		    }
+		    100% {
+		        transform: translateY(100%) rotateZ(17deg);
+		    }
+		}
+		@keyframes slideOutLeft {
+			from{
+				transform: translateX(0);
+			}
+		    to {
+		        transform: translateX(100%);
+		    }
+		}
+		@keyframes rotateOutNewspaper {
+		    to {
+		        transform: translateZ(-3000px) rotateZ(360deg);
+		        opacity: 0;
+		    }
+		}
+		@keyframes scaleUp {
+		    from {
+		        opacity: 0.3;
+		        -webkit-transform: scale(0.8);
+		    }
+		}
+		@keyframes slideInRight {
+		    from {
+		        transform:translateX(100%);
+		    }
+		    to {
+		        transform: translateX(0);
+		    }
+		}
+		@keyframes slideInUp {
+		    from {
+		        transform:translateY(100%);
+		    }
+		    to {
+		        transform: translateY(0);
+		    }
+		}
+
+		@keyframes slideOutUp{
+			from {
+				transform:translateY(0);
+			}
+			to {
+				transform:translateY(-100%);
+			}
+		}
+		@keyframes btnslideOutUp{
+			from{
+				transform:translateY(0);
+			}
+			to{
+				top:10px;
+			}
+		}
+
+		/*样式*/
+
+		body{
+			background-color: black;
+			color: white !important;
+			min-height: 610px;
+		}
+
+
+
+		.main-footer{
+			position: absolute !important;
+			bottom: 70px;
+		}
+		.col-sm-3,.col-sm-2{
+			padding: 20px;
+		}
+		
+		.choose-content{
+			padding-top:20px;
+		}
+		
+		.btn-right{
+			float:right;
+		}
+		.btn-left{
+			float:left;
+		}
+		.choose{
+			min-height: 100px;
+		}
+		.navbar{
+			margin-bottom: 0px !important;
+			border-radius: 0 !important;
+			position: fixed !important;
+			width: 100%;
+			top:0;
+			left:0;
+			z-index: 1000;
+		}
+		.nanwang{
+			background-color: blue;
+		}
+		.panel{
+			border-radius: 0 !important;
+			position: absolute !important;
+			margin-bottom: 0 !important;
+			width:100%;
+			height:100%;
+		}
+		.panel .title{
+			font-size: 30px;
+		}
+
+		.panel a{
+			color: white !important;
+		}
+
+		#homepage{
+			background-image:url("img/bg5.jpg"); 
+			background-size: cover;
+			border:none !important; 
+			z-index: 1;
+		}
+		#nanwang{
+			background-image:url("img/bg1.jpg"); 
+			background-size: cover;
+			border:none !important; 
+			z-index: 5;
+		}
+		#donglin{
+			background-image:url("img/bg2.jpg"); 
+			background-size: cover;
+			border:none !important; 
+			z-index:4;
+			width: 100%;
+		}
+		#pointstone{
+			background-image:url("img/bg6.jpg"); 
+			background-size: cover;
+			border:none !important; 
+			z-index: 2;
+			width: 100%
+		}
+		#gold{
+			background-image:url("img/bg4.jpg");
+			background-size: cover;
+			border:none !important;  
+			z-index: 3;
+			width: 100%;
+		}
+		#cover{
+			z-index: 5;
+			position: absolute;
+			display: block;
+			height: 100%;
+			padding: 4.5% 0; 
+			width: 100%; 
+		}
+
+		.ng-hide{  
+			z-index: 10000;
+		}
+		
+		.main-img{
+			margin-bottom: 10px;
+			margin-top:20px;
+		}
+
+		.main-word{
+			float:left;
+			width: 49%;
+			text-align:justify;
+			text-justify:newspaper;
+			text-justify:inter-ideograph;
+			margin-bottom: 10px;
+		}
+		
+		.turn{
+			display: block;
+			margin-bottom: 10px;
+			clear: both;
+		}
+		.title{
+			height: 300px;
+		}
+
+		.ng-enter {
+		    z-index: 8888;
+		}
+		.ng-leave {
+		    z-index: 9999;
+		}
+
+		.btn-hide{
+			animation-delay:2s;
+			animation:btnslideOutUp 3s both ease-in; 
+		}
+		.navbar-hide{
+			animation-delay:2s;
+			animation:slideOutUp 3s both ease-in;
+		}
+		.enter-right{
+			animation:moveleft 1.5s both ease-out; 
+			z-index: 100;
+			overflow: hidden;
+		}
+		.enter-left{
+			animation:moveright 1.5s both ease-out;
+		}
+
+		.scroll-move{
+			animation:movetop 1.5s both ease-out;
+		}
+
+
+		.main.ng-enter {
+		    animation: scaleUp 0.5s both ease-in;
+		}
+		.main.ng-leave {
+		    transform-origin: 0% 0%;
+		    animation: slideOutLeft 1s both ease-in;
+		}
+		.nanwang.ng-enter {
+		    animation:slideInRight 0.5s both ease-in;
+		}
+		.nanwang.ng-leave {
+		    animation:slideOutLeft 0.5s both ease-in;
+		}
+		.donglin.ng-enter {
+		    animation:slideInRight 0.5s both ease-in;
+		}
+		.donglin.ng-leave {
+		    animation:slideOutLeft 0.5s both ease-in;
+		}
+		.gold.ng-enter {
+		    animation:slideInRight 0.5s both ease-in;
+		}
+		.gold.ng-leave {
+		    animation:slideOutLeft 0.5s both ease-in;
+		}
+		.pointstone.ng-enter {
+		    animation:slideInRight 0.5s both ease-in;
+		}
+		.pointstone.ng-leave {
+		    animation:slideOutLeft 0.5s both ease-in;
+		}
+
+		/*兼容手机*/
+		@media screen and (max-width: 623px) {
+			#nanwang{
+				height: auto;
+			}
+			#donglin{
+				height:auto;
+			}
+			#pointstone{
+				height:auto;
+			}
+			#gold{
+				height:auto;
+			}
+			.panel .title{
+				font-size: 30px;
+			}
+			.main-word{
+				float:left;
+				width: 100%;
+			}
+			.main-img{
+				float: right;
+				display: inline;
+				width: 100%;
+				margin-top: 10px;
+			}
+			.turn{
+				display: flex;
+				justify-content: space-between;
+				clear: both;
+			}
+
+		}
+
