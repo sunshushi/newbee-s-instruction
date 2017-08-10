@@ -1,6 +1,10 @@
 var gold = angular.module("goldCtrls",[])
 
 gold.controller("goldCtrl",['$scope',function($scope){
+	$scope.contenthide = true;
+		$scope.showcontent =function(){
+           $scope.contenthide = false;         
+        }
 	$scope.init = function(){
           $scope.pageClass = 'ng-enter';
         }

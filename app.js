@@ -13,12 +13,28 @@ var appCtrl = angular.module("mainCtrl",['w5c.validator']);
 appCtrl.controller("mainCtrl",['$scope','$window','$document',
     function($scope,$window,$document){
         $scope.scrollTop = 0;
+        $scope.navbarname = "fa-hand-o-down"
 
         $scope.homepagehide = false
         $scope.nanwanghide = true;
         $scope.donglinhide = true;
         $scope.pointstonehide = true;
         $scope.goldhide = true;
+
+
+        $scope.navbar = function(){
+            if($scope.navbarname == "fa-hand-o-down"){
+                $scope.hideClass = 'navbar-show';
+                $scope.btnClass = 'btn-show';
+                $scope.navbarname = "fa-hand-o-up";
+            }
+            else if($scope.navbarname == "fa-hand-o-up")
+            {
+                $scope.hideClass = 'navbar-hide';
+                $scope.btnClass = 'btn-hide';
+                $scope.navbarname = "fa-hand-o-down";
+            }
+        }
 
         $scope.nextpage = function(ele){
             if(ele == "nanwanghide")
@@ -71,6 +87,8 @@ appCtrl.controller("mainCtrl",['$scope','$window','$document',
 
         $scope.init = function(){
           $scope.pageClass = 'ng-enter';
+          $scope.hideClass = 'navbar-hide'
+          $scope.btnClass = 'btn-hide'
         }
         $scope.hide = function(url){
           $scope.pageClass = 'ng-leave';

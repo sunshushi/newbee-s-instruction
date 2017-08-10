@@ -1,7 +1,14 @@
-<div ng-init="init()" class="gold {{pageClass}}"  ng-controller="goldCtrl">
+<div ng-init="init()" class="{{pageClass}}"  ng-controller="goldCtrl">
 	<div ui-view="topbar"></div>
 
-	<div ui-view="main" class="enter-left"></div>
+	<div class="col-sm-12 col-xs-12 gold" id="cover">
+		<div class="col-sm-3 col-xs-3">
+			<div ui-view="sidebar" class="" ng-click="showcontent()"></div>
+		</div>
+		<div class="col-sm-9 col-sm-9">
+			<div ui-view="main" class="content enter-bottom" ng-hide="contenthide"></div>
+		</div>
+	</div>
 
 
 </div>

@@ -33,16 +33,16 @@
 			}
 			
 		}
-
-		@keyframes movetop{
+		@keyframes movetop
+		{
 			from{
 				transform:translateY(600px);
 			}
 			to{
-				z-index: 5;
+				transform:translateY(0);
 			}
-			
 		}
+		
 
 		@keyframes rotateFall {
 		    0% {
@@ -99,6 +99,14 @@
 		    }
 		}
 
+		@keyframes slideInDown{
+			from{
+				transform:translateY(-100%);
+			}
+			to{
+				transform:translateY(0);
+			}
+		}
 		@keyframes slideOutUp{
 			from {
 				transform:translateY(0);
@@ -115,19 +123,61 @@
 				top:10px;
 			}
 		}
-
+		@keyframes btnslideInDown{
+			from{
+				top:10px;
+			}
+			to{
+				transform:translateY(0);
+			}
+		}
 		/*样式*/
 
 		body{
 			background-color: black;
 			color: white !important;
-			min-height: 610px;
+			min-height: 615px !important;
 		}
 
+		.content{
+			height: 600px;
+			overflow: auto;
+			position: absolute;
+			z-index: 100;
+			right: 0;
+			top:0;
+			background-image: url("img/content.jpg");
+			padding:15px 55px;
+			width: 100%;
+		}
+		.content-words{
+			padding:20px;width:85%;margin:0 auto;line-height:2;
+		}
 
+		.cover2{
+			position: absolute;
+			background-color: black;
+			bottom: 0px;
+			opacity: 0.5;
+			margin-right: 0px !important;
+			margin-left: 0px !important;
+			width: 100%;
+			height: 140px;
+		}
+		.cover1{
+			position: absolute;
+			background-color: black;
+			top: 0px;
+			opacity: 0.5;
+			margin-right: 0px !important;
+			margin-left: 0px !important;
+			width: 100%;
+			height: 140px;
+		}
 
 		.main-footer{
 			position: absolute !important;
+			z-index: 100;
 			bottom: 70px;
 		}
 		.col-sm-3,.col-sm-2{
@@ -140,12 +190,13 @@
 		
 		.btn-right{
 			float:right;
+			margin-right: -30px !important;
 		}
 		.btn-left{
 			float:left;
 		}
 		.choose{
-			min-height: 100px;
+			min-height: 200px;
 		}
 		.navbar{
 			margin-bottom: 0px !important;
@@ -157,7 +208,24 @@
 			z-index: 1000;
 		}
 		.nanwang{
-			background-color: blue;
+			background-image: url("img/cug/bg12.jpg");
+			background-size: cover;
+			min-height: 615px !important;
+		}
+		.donglin{
+			background-image: url("img/cug/bg27.jpg");
+			background-size: cover;
+			min-height: 615px !important;
+		}
+		.gold{
+			background-image: url("img/cug/bg13.jpg");
+			background-size: cover;
+			min-height: 615px !important;
+		}
+		.pointstone{
+			background-image: url("img/cug/bg32.jpg");
+			background-size: cover;
+			min-height: 615px !important;
 		}
 		.panel{
 			border-radius: 0 !important;
@@ -175,41 +243,40 @@
 		}
 
 		#homepage{
-			background-image:url("img/bg5.jpg"); 
+			background-image:url("img/cug/bg1.jpg"); 
 			background-size: cover;
 			border:none !important; 
-			z-index: 1;
+			z-index: 5;
 		}
 		#nanwang{
-			background-image:url("img/bg1.jpg"); 
+			background-image:url("img/cug/bg24.jpg"); 
 			background-size: cover;
 			border:none !important; 
 			z-index: 5;
 		}
 		#donglin{
-			background-image:url("img/bg2.jpg"); 
+			background-image:url("img/cug/bg10.jpg"); 
 			background-size: cover;
 			border:none !important; 
-			z-index:4;
+			z-index:5;
 			width: 100%;
 		}
 		#pointstone{
-			background-image:url("img/bg6.jpg"); 
+			background-image:url("img/cug/bg23.jpg"); 
 			background-size: cover;
 			border:none !important; 
-			z-index: 2;
+			z-index: 5;
 			width: 100%
 		}
 		#gold{
-			background-image:url("img/bg4.jpg");
+			background-image:url("img/cug/bg15.jpg");
 			background-size: cover;
 			border:none !important;  
-			z-index: 3;
+			z-index: 5;
 			width: 100%;
 		}
 		#cover{
 			z-index: 5;
-			position: absolute;
 			display: block;
 			height: 100%;
 			padding: 4.5% 0; 
@@ -239,9 +306,6 @@
 			margin-bottom: 10px;
 			clear: both;
 		}
-		.title{
-			height: 300px;
-		}
 
 		.ng-enter {
 		    z-index: 8888;
@@ -254,9 +318,15 @@
 			animation-delay:2s;
 			animation:btnslideOutUp 3s both ease-in; 
 		}
+		.btn-show{
+			animation:btnslideInDown 1s both ease-in;
+		}
 		.navbar-hide{
 			animation-delay:2s;
 			animation:slideOutUp 3s both ease-in;
+		}
+		.navbar-show{
+			animation:slideInDown 1s both ease-in;
 		}
 		.enter-right{
 			animation:moveleft 1.5s both ease-out; 
@@ -266,6 +336,10 @@
 		.enter-left{
 			animation:moveright 1.5s both ease-out;
 		}
+		.enter-bottom{
+			animation:movetop 0.35s both ease-out;
+		}
+
 
 		.scroll-move{
 			animation:movetop 1.5s both ease-out;

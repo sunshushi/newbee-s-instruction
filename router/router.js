@@ -12,6 +12,7 @@ app.config(function($stateProvider,$urlRouterProvider){
 		views:{
 			'':{templateUrl:'tpl/nanwang.html'},
             "topbar@nanwang":{templateUrl:'tpl/topbar1.html'},
+            "sidebar@nanwang":{templateUrl:'tpl/nanwang/sidebar1.html'},
             "main@nanwang":{templateUrl:'tpl/nanwangbegin.html'}
 		}
 	}).state('pointstone',{
@@ -74,7 +75,8 @@ app.config(function($stateProvider,$urlRouterProvider){
         views:{
             '':{templateUrl:'tpl/donglin.html'},
             "topbar@donglin":{templateUrl:'tpl/topbar2.html'},
-            "main@donglin":{templateUrl:'tpl/donglinlife.html'}
+            "main@donglin":{templateUrl:'tpl/donglinlife.html'},
+            "sidebar@donglin":{templateUrl:'tpl/donglin/sidebar2.html'},
         }
     }).state('donglin.army',{
         url:'/army',
@@ -151,7 +153,8 @@ app.config(function($stateProvider,$urlRouterProvider){
         views:{
             '':{templateUrl:'tpl/gold.html'},
             "topbar@gold":{templateUrl:'tpl/topbar3.html'},
-            "main@gold":{templateUrl:'tpl/nanwangbegin.html'}
+            "main@gold":{templateUrl:'tpl/nanwangbegin.html'},
+            "sidebar@gold":{templateUrl:'tpl/gold/sidebar3.html'},
         }
     }).state('gold.build',{
         url:'/build',
