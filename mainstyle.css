@@ -17,6 +17,12 @@
 		img{
 			height: 140px;
 		}
+		
+		/*改写滚动条为全部透明*/
+		::-webkit-scrollbar /*整体部分*/ { width: 0; height: 0; }
+		::-webkit-scrollbar-track /*滑动轨道*/ { background: rgba(0,0,0,0); }
+		::-webkit-scrollbar-thumb /*滑块*/ { background: rgba(0,0,0,0.0); }
+		::-webkit-scrollbar-thumb:hover /*滑块效果*/ { background: rgba(0,0,0,0); }
 
 
 		/*动画*/
@@ -79,7 +85,6 @@
 		@keyframes scaleUp {
 		    from {
 		        opacity: 0.3;
-		        -webkit-transform: scale(0.8);
 		    }
 		}
 		@keyframes slideInRight {
@@ -136,22 +141,31 @@
 		body{
 			background-color: black;
 			color: white !important;
-			min-height: 615px !important;
+			height: 100vh !important;
 		}
-
+		.sidebar-btn{
+			position:absolute;
+			left:1vw;
+			z-index:999;
+			bottom:7vh;
+			visibility:hidden;
+		}
 		.content{
-			height: 600px;
+			height: 100vh;
 			overflow: auto;
 			position: absolute;
 			z-index: 100;
 			right: 0;
 			top:0;
 			background-image: url("img/content.jpg");
-			padding:15px 55px;
+			padding:4vh 4vw 20vh 4vw;
 			width: 100%;
 		}
 		.content-words{
-			padding:20px;width:85%;margin:0 auto;line-height:2;
+			padding:3vh 4vw;
+			width:85%;
+			margin:0 auto;
+			line-height:2;
 		}
 
 		.cover2{
@@ -161,8 +175,8 @@
 			opacity: 0.5;
 			margin-right: 0px !important;
 			margin-left: 0px !important;
-			width: 100%;
-			height: 140px;
+			width: 100vw;
+			height: 8vh;
 		}
 		.cover1{
 			position: absolute;
@@ -171,17 +185,19 @@
 			opacity: 0.5;
 			margin-right: 0px !important;
 			margin-left: 0px !important;
-			width: 100%;
-			height: 140px;
+			width: 100vw;
+			height: 22vh;
 		}
 
 		.main-footer{
 			position: absolute !important;
 			z-index: 100;
-			bottom: 70px;
+			height: 1px;
+			bottom: 45vh;
 		}
 		.col-sm-3,.col-sm-2{
 			padding: 20px;
+			text-align: center;
 		}
 		
 		.choose-content{
@@ -190,52 +206,53 @@
 		
 		.btn-right{
 			float:right;
-			margin-right: -30px !important;
+			margin-right: -40px !important;
 		}
 		.btn-left{
 			float:left;
+			margin-left: -10px !important;
 		}
 		.choose{
-			min-height: 200px;
+			min-height: 33vh;
 		}
 		.navbar{
 			margin-bottom: 0px !important;
 			border-radius: 0 !important;
 			position: fixed !important;
-			width: 100%;
+			width:100vw;
 			top:0;
 			left:0;
 			z-index: 1000;
 		}
 		.nanwang{
-			background-image: url("img/cug/bg12.jpg");
+			background: url("img/cug/bg12.jpg") no-repeat;
 			background-size: cover;
-			min-height: 615px !important;
+			min-height: 100vh !important;
 		}
 		.donglin{
 			background-image: url("img/cug/bg27.jpg");
 			background-size: cover;
-			min-height: 615px !important;
+			min-height: 100vh !important;
 		}
 		.gold{
 			background-image: url("img/cug/bg13.jpg");
 			background-size: cover;
-			min-height: 615px !important;
+			min-height: 100vh !important;
 		}
 		.pointstone{
 			background-image: url("img/cug/bg32.jpg");
 			background-size: cover;
-			min-height: 615px !important;
+			min-height: 100vh !important;
 		}
 		.panel{
 			border-radius: 0 !important;
 			position: absolute !important;
 			margin-bottom: 0 !important;
-			width:100%;
-			height:100%;
+			width:100vw;
+			height:100vh;
 		}
 		.panel .title{
-			font-size: 30px;
+			font-size: 25px;
 		}
 
 		.panel a{
@@ -259,28 +276,28 @@
 			background-size: cover;
 			border:none !important; 
 			z-index:5;
-			width: 100%;
+			width: vw;
 		}
 		#pointstone{
 			background-image:url("img/cug/bg23.jpg"); 
 			background-size: cover;
 			border:none !important; 
 			z-index: 5;
-			width: 100%
+			width: vw;
 		}
 		#gold{
 			background-image:url("img/cug/bg15.jpg");
 			background-size: cover;
 			border:none !important;  
 			z-index: 5;
-			width: 100%;
+			width: 100vw;
 		}
 		#cover{
 			z-index: 5;
 			display: block;
-			height: 100%;
-			padding: 4.5% 0; 
-			width: 100%; 
+			height: 100vh;
+			padding: 5.5vh 0; 
+			width: 100vw; 
 		}
 
 		.ng-hide{  
@@ -344,7 +361,9 @@
 		.scroll-move{
 			animation:movetop 1.5s both ease-out;
 		}
-
+		.word-show{
+			animation:scaleUp 0.5s both ease-in;
+		}
 
 		.main.ng-enter {
 		    animation: scaleUp 0.5s both ease-in;
@@ -378,22 +397,41 @@
 		    animation:slideOutLeft 0.5s both ease-in;
 		}
 
+
+
 		/*兼容手机*/
-		@media screen and (max-width: 623px) {
-			#nanwang{
-				height: auto;
+		@media screen and (max-width: 600px){
+			.list-group{
+				position: absolute;
+				z-index: 101;
+				left:1vw;
+				animation:scaleUp 1.5s both ease-in;
 			}
-			#donglin{
-				height:auto;
+			h1{
+				font-size:5.5vw !important;
 			}
-			#pointstone{
-				height:auto;
+			p{
+				font-size: 2.5vw !important;
 			}
-			#gold{
-				height:auto;
+			.sidebar-btn{
+				 visibility: visible;
 			}
-			.panel .title{
-				font-size: 30px;
+
+		}
+		
+		@media screen and (min-width:600px) and (max-width: 770px) {
+			.sidebar-btn{
+				 visibility: visible;
+			}
+			.list-group{
+				position: absolute;
+				z-index: 101;
+				left:1vw;
+				animation:scaleUp 1.5s both ease-in;
+			}
+			
+			h1{
+				font-size:4.5vw !important;
 			}
 			.main-word{
 				float:left;

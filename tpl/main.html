@@ -4,10 +4,21 @@
 	<div ng-controller="mainCtrl" ng-init="init()" class="main {{pageClass}}">
 		
 		<nav class="navbar navbar-inverse {{hideClass}}" role="navigation">
+		   <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
-		        <a class="navbar-brand">地大新生手册</a>
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">中国地质大学新生手册</a>
 		    </div>
-		    <ul class="nav navbar-nav">
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
 		        <li>
 		            <a ui-sref="index">首页</a>
 		        </li>
@@ -23,18 +34,20 @@
 		        <li>
 		            <a ui-sref="pointstone">关于我们</a>
 		        </li>
-		    </ul>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
 		</nav>
 		<a class="button button-circle button-raised button-primary button-raised button-primary {{btnClass}}" style="position:absolute;right:10px;z-index:999;top:52px;" ng-click="navbar()"><i class="fa {{navbarname}}"></i></a>
 		
 		<div class="panel panel-primary" id="homepage" scrollslide ng-hide="homepagehide" >
-			<div class="enter-right" id="cover">
-				<div class="row title">
-					<div class="enter-right col-sm-12 col-xs-12">
+			<div class="word-show" id="cover">
+				<div class="row title word-show">
+					<div class=" col-sm-12 col-xs-12">
 						<div class="col-sm-6 col-xs-6">
 							<h1>中国地质大学新生手册</h1>
 							<br>
-							<p>Lorem ipsum dolor sit amet</p>
+							<h1>CUG Freshman handbook</h1>
 						</div>
 					</div>
 				</div>
@@ -54,27 +67,49 @@
 			</div>
 		</div>
 		<div class="panel panel-primary" id="nanwang" scrollslide  ng-hide="nanwanghide">
-				<div class="enter-right" id="cover">
-					<div class="row title">
-						<div class="enter-right col-sm-12 col-xs-12">
+				<div class="word-show" id="cover">
+					<div class="row title word-show">
+						<div class=" col-sm-12 col-xs-12">
 							<div class="col-sm-6 col-xs-6">
 								<h1>南望山下的开始</h1>
 								<br>
-								<p>Lorem ipsum dolor sit amet</p>
+								<br>
+								<h1>Begin</h1>
 							</div>
 						</div>
 					</div>
 					<div class="row cover1"></div>
 					<div class="row cover2"></div>
-					<div class="row choose">
-						<div class="col-sm-12 col-xs-12 choose-content">
-							<div class="col-sm-3 col-xs-3"><a class="button button-glow button-rounded button-primary col-sm-12 col-xs-12" ui-sref="nanwang.school"><i class="fa fa-university"></i>  学校介绍</a></div>
-							<div class="col-sm-3 col-xs-3"><a class="button button-glow button-rounded button-highlight col-sm-12 col-xs-12" ui-sref="nanwang.map"><i class="fa fa-map-marker"></i>  地图</a></div>
-							<div class="col-sm-3 col-xs-3"><a class="button button-glow button-rounded button-caution col-sm-12 col-xs-12" ui-sref="nanwang.wholeschool"><i class="fa fa-globe"></i>  全景校园</a></div>
-							<div class="col-sm-3 col-xs-3"><a class="button button-glow button-rounded button-royal col-sm-12 col-xs-12" ui-sref="nanwang.list"><i class="fa fa-th-list"></i>  必备清单</a></div>
-							<div class="col-sm-3 col-xs-3"><a class="button button-glow button-rounded button-action col-sm-12 col-xs-12" ui-sref="nanwang.trans"><i class="fa fa-bus"></i>  乘车交通</a></div>
-							<div class="col-sm-3 col-xs-3"><a class="button button-glow button-rounded button-inverse col-sm-12 col-xs-12" ui-sref="nanwang.process"><i class="fa fa-bell "></i>  报道流程</a></div>
-							<div class="col-sm-3 col-xs-3"><a class="button button-glow button-rounded button-primary col-sm-12 col-xs-12" style="color:white" ui-sref="nanwang.loan"><i class="fa fa-credit-card"></i>  关于贷款</a></div>
+					<div class="row choose enter-right">
+						<div class="col-sm-10 col-xs-10 col-sm-offset-1 col-xs-offset-1 choose-content">
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-primary " ui-sref="nanwang.school"><i class="fa fa-university"></i></a>
+								<p>学校介绍</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-highlight" ui-sref="nanwang.map"><i class="fa fa-map-marker"></i></a>
+								<p>地图</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-caution" ui-sref="nanwang.wholeschool"><i class="fa fa-globe"></i></a>
+								<p>全景校园</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-royal" ui-sref="nanwang.list"><i class="fa fa-th-list"></i></a>
+								<p>必备清单</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-action" ui-sref="nanwang.trans"><i class="fa fa-bus"></i></a>
+								<p>乘车交通</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-inverse" ui-sref="nanwang.process"><i class="fa fa-bell "></i></a>
+								<p>报道流程</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-primary" style="color:white" ui-sref="nanwang.loan"><i class="fa fa-credit-card"></i></a>
+								<p>关于贷款</p>
+							</div>
 
 						</div>
 						
@@ -95,30 +130,60 @@
 		</div>
 
 		<div class="panel panel-primary" id="donglin" scrollslide  ng-hide="donglinhide" >
-				<div class="enter-right" id="cover">
-					<div class="row title">
-						<div class="enter-right col-sm-12 col-xs-12">
+				<div class="word-show" id="cover">
+					<div class="row title word-show">
+						<div class="col-sm-12 col-xs-12">
 							<div class="col-sm-6 col-xs-6">
-								<h1>东湖河畔的生活</h1>
+								<h1>东湖之滨的生活</h1>
 								<br>
-								<p>Lorem ipsum dolor sit amet</p>
+								<br>
+								<h1>Life</h1>
 							</div>
 						</div>
 					</div>
 					<div class="row cover1"></div>
 					<div class="row cover2"></div>
-					<div class="row choose">
-						<div class="col-sm-12 col-xs-12 choose-content">
-							<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-primary col-sm-12 col-xs-12" ui-sref="donglin.army"><i class="fa fa-male"></i>  军训</a></div>
-							<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-highlight col-sm-12 col-xs-12" ui-sref="donglin.dor"><i class="fa fa-home"></i>  宿舍</a></div>
-							<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-caution col-sm-12 col-xs-12" ui-sref="donglin.web"><i class="fa fa-internet-explorer"></i>  网络</a></div>
-							<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-royal col-sm-12 col-xs-12" ui-sref="donglin.food"><i class="fa fa-cutlery"></i>  吃喝</a></div>
-							<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-action col-sm-12 col-xs-12" ui-sref="donglin.entertain"><i class="fa fa-play"></i>  玩乐</a></div>
-							<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-inverse col-sm-12 col-xs-12" ui-sref="donglin.life_trans"><i class="fa fa-bus"></i>  常用交通</a></div>
-							<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-primary col-sm-12 col-xs-12" ui-sref="donglin.party"><i class="fa fa-sign-language"></i>  学校活动</a></div>
-							<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-highlight col-sm-12 col-xs-12" ui-sref="donglin.hobby"><i class="fa fa-users"></i>  兴趣社团</a></div>
-							<div class="col-sm-2 col-xs-2"> <a class="button button-glow button-rounded button-royal col-sm-12 col-xs-12" ui-sref="donglin.partime"><i class="fa fa-briefcase"></i>  勤工助学</a></div>
-							<div class="col-sm-3 col-xs-3"><a class="button button-glow button-rounded button-action col-sm-12 col-xs-12" ui-sref="donglin.union"><i class="fa fa-user"></i>  学生会与团学联</a></div>
+					<div class="row choose enter-right">
+						<div class="col-sm-10 col-xs-10 col-sm-offset-1 col-xs-offset-1 choose-content">
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-primary" ui-sref="donglin.army"><i class="fa fa-male"></i></a>
+								<p>军训</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-highlight" ui-sref="donglin.dor"><i class="fa fa-home"></i></a>
+								<p>宿舍</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-caution" ui-sref="donglin.web"><i class="fa fa-internet-explorer"></i></a>
+								<p>网络</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-royal" ui-sref="donglin.food"><i class="fa fa-cutlery"></i></a>
+								<p>吃喝</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-action" ui-sref="donglin.entertain"><i class="fa fa-play"></i></a>
+								<p>玩乐</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-primary" ui-sref="donglin.party"><i class="fa fa-sign-language"></i></a>
+								<p>学校活动</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-highlight" ui-sref="donglin.hobby"><i class="fa fa-users"></i></a>
+								<p>兴趣社团</p>
+							</div>
+							<div class="col-sm-3 col-xs-3"> 
+								<a class="button button-glow button-circle button-royal" ui-sref="donglin.partime"><i class="fa fa-briefcase"></i></a>
+								<p>勤工助学</p>
+							</div>
+							<div class="col-sm-3 col-xs-3"><a class="button button-glow button-circle button-action" ui-sref="donglin.union"><i class="fa fa-user"></i></a>
+								<p>学生会团学联</p>
+							</div>
+							<div class="col-sm-3 col-xs-3">
+								<a class="button button-glow button-circle button-inverse" ui-sref="donglin.life_trans"><i class="fa fa-bus"></i></a>
+								<p>常用交通</p>
+							</div>
 
 						</div>
 						
@@ -140,32 +205,66 @@
 
 
 		<div class="panel panel-primary" id="gold" scrollslide ng-hide="goldhide">
-			<div class="enter-right" id="cover">
-			<div class="row title">
-				<div class="enter-right col-sm-12 col-xs-12">
+			<div class="word-show" id="cover">
+			<div class="row title word-show">
+				<div class=" col-sm-12 col-xs-12">
 					<div class="col-sm-6 col-xs-6">
 						<h1>点石成金的学习</h1>
 						<br>
-						<p>Lorem ipsum dolor sit amet</p>
+						<br>
+						<h1>Study</h1>
 					</div>
 					
 				</div>
 			</div>
 			<div class="row cover1"></div>
 			<div class="row cover2"></div>
-			<div class="row choose">
-				<div class="col-sm-12 col-xs-12 choose-content">
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-primary col-sm-12 col-xs-12" ui-sref="gold.build"><i class="fa fa-building"></i>  教学楼</a></div>
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-highlight col-sm-12 col-xs-12" ui-sref="gold.lib"><i class="fa fa-bookmark"></i>  图书馆</a></div>
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-caution col-sm-12 col-xs-12" ui-sref="gold.study"><i class="fa fa-book"></i>  日常学习</a></div>
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-royal col-sm-12 col-xs-12" ui-sref="gold.exam"><i class="fa fa-reorder"></i>  考试</a></div>
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-action col-sm-12 col-xs-12" ui-sref="gold.stu_work"><i class="fa fa-building-o"></i>  学生工作</a></div>
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-inverse col-sm-12 col-xs-12" ui-sref="gold.major_ch"><i class="fa fa-map-pin"></i>  转专业</a></div>
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-primary col-sm-12 col-xs-12" ui-sref="gold.tw_deg"><i class="fa fa-arrows-h"></i>  双学位</a></div>
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-highlight col-sm-12 col-xs-12" ui-sref="gold.rubbage"><i class="fa fa-venus-double"></i>  教务处</a></div>
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-caution col-sm-12 col-xs-12" ui-sref="gold.gradu"><i class="fa fa-graduation-cap"></i>保研与考研</a></div>
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-royal col-sm-12 col-xs-12" ui-sref="gold.foreign"><i class="fa fa-cube"></i>  出国留学</a></div>
-					<div class="col-sm-2 col-xs-2"><a class="button button-glow button-rounded button-action col-sm-12 col-xs-12" ui-sref="gold.job"><i class="fa fa-briefcase"></i>  就业与创业</a></div>
+			<div class="row choose enter-right">
+				<div class="col-sm-10 col-xs-10 col-sm-offset-1 col-xs-offset-1 choose-content">
+					<!-- <div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-primary" ui-sref="gold.build"><i class="fa fa-building"></i></a>
+						<p>教学楼</p>
+					</div>
+					<div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-highlight" ui-sref="gold.lib"><i class="fa fa-bookmark"></i></a>
+						<p>图书馆</p>
+					</div> -->
+					<div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-caution" ui-sref="gold.study"><i class="fa fa-book"></i></a>
+						<p>日常学习</p>
+					</div>
+					<div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-royal" ui-sref="gold.exam"><i class="fa fa-reorder"></i></a>
+						<p>考试</p>
+					</div>
+					<div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-action" ui-sref="gold.stu_work"><i class="fa fa-building-o"></i></a>
+						<p>学生工作</p>
+					</div>
+					<div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-inverse" ui-sref="gold.major_ch"><i class="fa fa-map-pin"></i></a>
+						<p>转专业</p>
+					</div>
+					<div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-primary" ui-sref="gold.tw_deg"><i class="fa fa-arrows-h"></i></a>
+						<p>双学位</p>
+					</div>
+					<div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-highlight" ui-sref="gold.rubbage"><i class="fa fa-venus-double"></i></a>
+						<p>教务处</p>
+					</div>
+					<div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-caution" ui-sref="gold.gradu"><i class="fa fa-graduation-cap"></i></a>
+						<p>保研与考研</p>
+					</div>
+					<div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-royal" ui-sref="gold.foreign"><i class="fa fa-cube"></i></a>
+						<p>出国留学</p>
+					</div>
+					<div class="col-sm-3 col-xs-3">
+						<a class="button button-glow button-circle button-action" ui-sref="gold.job"><i class="fa fa-briefcase"></i> </a>
+						<p>就业与创业</p>
+					</div>
 				</div>
 				
 
@@ -189,20 +288,21 @@
 
 
 		<div class="panel panel-primary" id="pointstone" scrollslide ng-hide="pointstonehide">
-			<div class="enter-right" id="cover">
-			<div class="row title">
-				<div class="enter-right col-sm-12 col-xs-12">
+			<div class="word-show" id="cover">
+			<div class="row title word-show">
+				<div class="col-sm-12 col-xs-12">
 					<div class="col-sm-6 col-xs-6">
 						<h1>点石团队&&新媒体中心--强强联合</h1>
 						<br>
-						<p>Lorem ipsum dolor sit amet</p>
+						<br>
+						<h1>About</h1>
 					</div>
 					
 				</div>
 			</div>
 			<div class="row cover1"></div>
 			<div class="row cover2"></div>
-			<div class="row choose">
+			<div class="row choose enter-right">
 
 			</div>
 			<div class="row">

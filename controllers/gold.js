@@ -1,9 +1,22 @@
 var gold = angular.module("goldCtrls",[])
 
 gold.controller("goldCtrl",['$scope',function($scope){
-	$scope.contenthide = true;
-		$scope.showcontent =function(){
-           $scope.contenthide = false;         
+	//$scope.contenthide = true;
+  $scope.sidehide = false;
+    $scope.showcontent =function(){
+           $scope.contenthide = false;
+           if(document.body.clientWidth < 780){
+              $scope.sidehide = true;
+           }
+        }
+		$scope.showsidebar = function(){
+          if($scope.sidehide == true){
+            $scope.sidehide = false;
+          }
+          else if($scope.sidehide == false){
+            $scope.sidehide = true;
+          }
+          
         }
 	$scope.init = function(){
           $scope.pageClass = 'ng-enter';

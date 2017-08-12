@@ -1,5 +1,65 @@
 <div class="panel {{pageClass}}" ng-init="init()" ng-controller="pointstoneCtrl">
-	<div class="pointstone"></div>
+	<div class="pointstone" style="text-align:center"></div>
+
+	<nav class="navbar navbar-inverse {{hideClass}}" role="navigation">
+		   <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">制作人员</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        <li>
+		            <a ui-sref="index">首页</a>
+		        </li>
+		        <li>
+		            <a ui-sref="nanwang">南望山下</a>
+		        </li>
+		        <li>
+		            <a ui-sref="donglin">东湖河畔</a>
+		        </li>
+		        <li>
+		            <a ui-sref="gold">点石成金</a>
+		        </li>
+		        <li>
+		            <a ui-sref="pointstone">关于我们</a>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+		<div style="position:absolute;z-index:102;top:5vh;text-align:center;background-color:black;width:50vw;margin-left:25vw;margin-right:25vw;margin-top:20vh;">
+			<h3>点石团队</h3>
+			<p>
+				<ul>
+					<li><p>LilacSun</p></li>
+
+				</ul>
+
+			</p>
+			<h3>新媒体中心</h3>
+			<p>
+				<ul>
+					<li><p>中国地质大学武汉新媒体中心主任李其胜</p></li>
+					<li><p>中国地质大学武汉新媒体中心运营总监王琼怡雅</p></li>
+					<li><p>中国地质大学武汉新媒体中心项目总监胡飞雅</p></li>
+					<li><p>中国地质大学武汉新媒体中心外联总监钟晓鸣</p></li>
+					<li><p>中国地质大学武汉新媒体中心设计总监付焱</p></li>
+					<li><p>中国地质大学武汉新媒体中心秘书长曹倩倩</p></li>
+					<li><p>中国地质大学武汉新媒体中心责任编辑辛美仪、陈诗睿、王敏、刘权</p></li>
+				</ul>
+			</p>
+
+		</div>
 
 
 </div>

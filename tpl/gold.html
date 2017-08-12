@@ -1,9 +1,11 @@
 <div ng-init="init()" class="{{pageClass}}"  ng-controller="goldCtrl">
 	<div ui-view="topbar"></div>
 
+	<a class="button button-circle button-raised button-primary button-raised button-primary sidebar-btn"  ng-click="showsidebar()"><i class="fa fa-list"></i></a>
+
 	<div class="col-sm-12 col-xs-12 gold" id="cover">
 		<div class="col-sm-3 col-xs-3">
-			<div ui-view="sidebar" class="" ng-click="showcontent()"></div>
+			<div ui-view="sidebar" ng-hide="sidehide" ng-click="showcontent()"></div>
 		</div>
 		<div class="col-sm-9 col-sm-9">
 			<div ui-view="main" class="content enter-bottom" ng-hide="contenthide"></div>
